@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Taekwondo Grafing – Traditionelle Kampfkunst</title>
+  <meta name="description" content="Traditionelles Taekwondo in Grafing für Kinder, Jugendliche und Erwachsene. Kostenloses Probetraining vereinbaren.">
+
+  <style>
+    :root {
+      --red: #b5121b;
+      --red-dark: #8f0e15;
+      --black: #111111;
+      --dark: #1b1b1b;
+      --light: #f5f5f3;
+      --white: #ffffff;
+      --gray: #666666;
+      --border: #dddddd;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--black);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(92%, var(--max));
+      margin: 0 auto;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo {
+      font-weight: 800;
+      letter-spacing: 1px;
+      font-size: 1.15rem;
+      white-space: nowrap;
+    }
+
+    .logo span {
+      display: block;
+      color: var(--red);
+      font-size: 0.72rem;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--red);
+    }
+
+    .nav-button {
+      background: var(--red);
+      color: white;
+      padding: 12px 18px;
+      border-radius: 6px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .nav-button:hover {
+      background: var(--red-dark);
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 680px;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0,0,0,0.86) 0%,
+          rgba(0,0,0,0.68) 48%,
+          rgba(0,0,0,0.25) 100%
+        ),
+        linear-gradient(135deg, #222, #555);
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 720px;
+      padding: 100px 0;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #e6e6e6;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(3rem, 7vw, 6.5rem);
+      line-height: 0.95;
+      letter-spacing: -3px;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 span {
+      color: #e32630;
+    }
+
+    .hero p {
+      max-width: 650px;
+      font-size: 1.25rem;
+      color: #eeeeee;
+      margin-bottom: 34px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 24px;
+      border-radius: 6px;
+      font-weight: 800;
+      transition: 0.2s ease;
+    }
+
+    .button-primary {
+      background: var(--red);
+      color: white;
+    }
+
+    .button-primary:hover {
+      background: var(--red-dark);
+      transform: translateY(-2px);
+    }
+
+    .button-outline {
+      border: 2px solid white;
+      color: white;
+    }
+
+    .button-outline:hover {
+      background: white;
+      color: var(--black);
+    }
+
+    /* =========================
+       QUICK INFO
+    ========================= */
+
+    .quick-info {
+      background: var(--black);
+      color: white;
+    }
+
+    .quick-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .quick-item {
+      padding: 25px;
+      text-align: center;
+      border-right: 1px solid #333;
+    }
+
+    .quick-item:last-child {
+      border-right: none;
+    }
+
+    .quick-item strong {
+      display: block;
+      font-size: 1.05rem;
+      margin-bottom: 4px;
+    }
+
+    .quick-item span {
+      color: #bbbbbb;
+      font-size: 0.9rem;
+    }
+
+    /* =========================
+       SECTIONS
+    ========================= */
+
+    section {
+      padding: 95px 0;
+    }
+
+    .section-head {
+      max-width: 720px;
+      margin-bottom: 50px;
+    }
+
+    .section-label {
+      color: var(--red);
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      line-height: 1.05;
+      margin-bottom: 18px;
+    }
+
+    .section-head p {
+      color: var(--gray);
+      font-size: 1.05rem;
+    }
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about {
+      background: var(--light);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .about-text p {
+      margin-bottom: 18px;
+      color: #444;
+    }
+
+    .quote {
+      border-left: 5px solid var(--red);
+      padding: 20px 25px;
+      background: white;
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-top: 30px;
+    }
+
+    .discipline-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .discipline {
+      background: white;
+      border: 1px solid var(--border);
+      padding: 15px;
+      font-weight: 700;
+    }
+
+    /* =========================
+       TRAINING
+    ========================= */
+
+    .training-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .training-card {
+      border: 1px solid var(--border);
+      padding: 30px;
+      border-radius: 8px;
+      background: white;
+      transition: 0.2s ease;
+    }
+
+    .training-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    }
+
+    .age {
+      color: var(--red);
+      font-size: 0.82rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    .training-card h3 {
+      font-size: 1.55rem;
+      margin-bottom: 12px;
+    }
+
+    .training-card p {
+      color: var(--gray);
+    }
+
+    .benefits {
+      list-style: none;
+      margin-top: 20px;
+    }
+
+    .benefits li {
+      padding: 7px 0;
+      border-bottom: 1px solid #eeeeee;
+    }
+
+    .benefits li::before {
+      content: "✓";
+      color: var(--red);
+      font-weight: 900;
+      margin-right: 9px;
+    }
+
+    /* =========================
+       TEAM
+    ========================= */
+
+    .team {
+      background: var(--light);
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .team-card {
+      background: white;
+      border: 1px solid var(--border);
+      padding: 25px;
+      border-radius: 8px;
+    }
+
+    .team-placeholder {
+      height: 180px;
+      background: #e9e9e7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #888;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .team-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 4px;
+    }
+
+    .team-card p {
+      color: var(--gray);
+      font-size: 0.9rem;
+    }
+
+    /* =========================
+       TRAININGSZEITEN
+    ========================= */
+
+    .schedule-box {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-top: 30px;
+    }
+
+    .schedule-row {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      padding: 18px 22px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .schedule-row:last-child {
+      border-bottom: none;
+    }
+
+    .schedule-row.header {
+      background: var(--black);
+      color: white;
+      font-weight: 700;
+    }
+
+    .schedule-note {
+      margin-top: 20px;
+      color: var(--gray);
+      font-size: 0.9rem;
+    }
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta {
+      background: var(--red);
+      color: white;
+      text-align: center;
+    }
+
+    .cta .section-label {
+      color: white;
+      opacity: 0.8;
+    }
+
+    .cta h2 {
+      max-width: 750px;
+      margin: 0 auto 18px;
+    }
+
+    .cta p {
+      max-width: 650px;
+      margin: 0 auto 30px;
+      color: #ffe9e9;
+    }
+
+    .cta .button {
+      background: white;
+      color: var(--red);
+    }
+
+    .cta .button:hover {
+      background: #f2f2f2;
+      transform: translateY(-2px);
+    }
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+
+    .contact-item {
+      margin-bottom: 25px;
+    }
+
+    .contact-item strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .contact-item a {
+      color: var(--red);
+      font-weight: 700;
+    }
+
+    .contact-card {
+      background: var(--light);
+      padding: 35px;
+      border-radius: 8px;
+    }
+
+    .contact-card h3 {
+      margin-bottom: 15px;
+    }
+
+    .contact-card p {
+      color: var(--gray);
+      margin-bottom: 25px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: var(--black);
+      color: white;
+      padding: 45px 0;
+    }
+
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    footer p {
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+      color: #ccc;
+      font-size: 0.9rem;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        min-height: 620px;
+      }
+
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .training-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .team-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .quick-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .quick-item {
+        border-right: none;
+        border-bottom: 1px solid #333;
+      }
+
+      .quick-item:last-child {
+        border-bottom: none;
+      }
+    }
+
+    @media (max-width: 600px) {
+      section {
+        padding: 70px 0;
+      }
+
+      .hero-content {
+        padding: 80px 0;
+      }
+
+      .hero h1 {
+        letter-spacing: -1.5px;
+      }
+
+      .hero p {
+        font-size: 1.05rem;
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .discipline-list {
+        grid-template-columns: 1fr;
+      }
+
+      .team-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .schedule-row {
+        grid-template-columns: 1fr;
+        gap: 5px;
+      }
+
+      .schedule-row.header {
+        display: none;
+      }
+
+      .logo {
+        font-size: 1rem;
+      }
+
+      .nav-button {
+        padding: 10px 12px;
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container nav">
+
+      <a href="#start" class="logo">
+        TAEKWONDO GRAFING
+        <span>TRADITIONELLE KAMPFKUNST</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#taekwondo">Taekwondo</a>
+        <a href="#training">Training</a>
+        <a href="#team">Trainerteam</a>
+        <a href="#zeiten">Trainingszeiten</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+
+      <a href="#probetraining" class="nav-button">
+        PROBETRAINING
+      </a>
+
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+  <main id="start">
+
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+
+          <div class="eyebrow">
+            Traditionelle koreanische Kampfkunst · Grafing
+          </div>
+
+          <h1>
+            Körper und<br>
+            <span>Geist trainieren.</span>
+          </h1>
+
+          <p>
+            Traditionelles Taekwondo für Kinder, Jugendliche und Erwachsene.
+            Entdecke die Faszination einer Kampfkunst, die Bewegung,
+            Selbstvertrauen, Disziplin und Gemeinschaft verbindet.
+          </p>
+
+          <div class="buttons">
+            <a href="#probetraining" class="button button-primary">
+              🥋 PROBETRAINING VEREINBAREN
+            </a>
+
+            <a href="#training" class="button button-outline">
+              Trainingsangebote ansehen
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- QUICK INFO -->
+    <div class="quick-info">
+      <div class="container quick-grid">
+
+        <div class="quick-item">
+          <strong>Kinder & Jugendliche</strong>
+          <span>Altersgerechtes Training</span>
+        </div>
+
+        <div class="quick-item">
+          <strong>Jugend & Erwachsene</strong>
+          <span>Gemeinsam trainieren</span>
+        </div>
+
+        <div class="quick-item">
+          <strong>Kostenloses Probetraining</strong>
+          <span>Einfach ausprobieren</span>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- TAEKWONDO -->
+    <section id="taekwondo" class="about">
+      <div class="container">
+
+        <div class="section-head">
+          <div class="section-label">Unsere Kampfkunst</div>
+          <h2>Traditionelles Taekwondo</h2>
+          <p>
+            Mehr als Sport: Taekwondo verbindet Körper und Geist.
+          </p>
+        </div>
+
+        <div class="about-grid">
+
+          <div class="about-text">
+
+            <p>
+              Bei uns lernst du Taekwondo im traditionellen Stil –
+              ohne Vollkontakt. Die Kampfkunst basiert auf den Lehren
+              von Kwon Jae-hwa und wird im UTTC-Verband weiterentwickelt.
+            </p>
+
+            <p>
+              Im Mittelpunkt stehen nicht nur Technik und Bewegung,
+              sondern auch Selbstvertrauen, Konzentration, Disziplin
+              und die Fähigkeit, Körper und Geist in Einklang zu bringen.
+            </p>
+
+            <div class="quote">
+              „Körper und Geist in Einklang bringen.“
+            </div>
+
+          </div>
+
+          <div>
+
+            <h3>Die Disziplinen des Taekwondo</h3>
+
+            <div class="discipline-list">
+
+              <div class="discipline">Grundschule</div>
+              <div class="discipline">Hyong · Formenlauf</div>
+              <div class="discipline">Ilbo-Taeryon</div>
+              <div class="discipline">Taeryon · Freikampf</div>
+              <div class="discipline">Kyek-Pa · Bruchtest</div>
+              <div class="discipline">Hosinsul · Selbstverteidigung</div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- TRAINING -->
+    <section id="training">
+      <div class="container">
+
+        <div class="section-head">
+          <div class="section-label">Unser Angebot</div>
+          <h2>Taekwondo für jedes Alter</h2>
+          <p>
+            Unterschiedliche Altersgruppen, ein gemeinsames Ziel:
+            gemeinsam lernen, wachsen und Spaß haben.
+          </p>
+        </div>
+
+        <div class="training-grid">
+
+          <!-- LITTLE TIGERS -->
+          <article class="training-card">
+
+            <div class="age">4,5 – ca. 7 Jahre</div>
+
+            <h3>Little Tigers</h3>
+
+            <p>
+              Spielerisches Training für die Kleinsten. Im Mittelpunkt
+              stehen Bewegung, Koordination und die Freude am gemeinsamen
+              Training.
+            </p>
+
+            <ul class="benefits">
+              <li>Gleichgewicht</li>
+              <li>Beweglichkeit</li>
+              <li>Koordination</li>
+              <li>Geschicklichkeit</li>
+              <li>Fitness & Kraft</li>
+              <li>Teamwork</li>
+            </ul>
+
+          </article>
+
+
+          <!-- TIGER KIDS -->
+          <article class="training-card">
+
+            <div class="age">7 – ca. 16 Jahre</div>
+
+            <h3>Tiger Kids</h3>
+
+            <p>
+              Altersgerechtes Training ohne Leistungsdruck oder
+              Wettkampfgedanken. Bei uns soll dein Kind Spaß haben
+              und sich weiterentwickeln.
+            </p>
+
+            <ul class="benefits">
+              <li>Formenlauf & Kicks</li>
+              <li>Selbstbehauptung</li>
+              <li>Selbstverteidigung</li>
+              <li>Fitness</li>
+              <li>Respekt & Disziplin</li>
+              <li>Teamwork</li>
+            </ul>
+
+          </article>
+
+
+          <!-- ERWACHSENE -->
+          <article class="training-card">
+
+            <div class="age">Ab ca. 16 Jahre</div>
+
+            <h3>Jugend & Erwachsene</h3>
+
+            <p>
+              Gemeinsam trainieren – unabhängig von Alter und
+              Gürtelgrad. Jeder entwickelt sich entsprechend
+              seinen persönlichen Fähigkeiten.
+            </p>
+
+            <ul class="benefits">
+              <li>Beweglichkeit</li>
+              <li>Ausdauer & Fitness</li>
+              <li>Kraft & Koordination</li>
+              <li>Fokus</li>
+              <li>Stressabbau</li>
+              <li>Selbstverteidigung</li>
+            </ul>
+
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- TEAM -->
+    <section id="team" class="team">
+      <div class="container">
+
+        <div class="section-head">
+          <div class="section-label">Kompetent · erfahren · motiviert</div>
+          <h2>Unser Trainerteam</h2>
+          <p>
+            Erfahrung, Leidenschaft und Freude am gemeinsamen Training.
+          </p>
+        </div>
+
+        <div class="team-grid">
+
+          <article class="team-card">
+            <div class="team-placeholder">FOTO</div>
+            <h3>Robert Neumann, 5. Dan</h3>
+            <p>Schulleiter</p>
+          </article>
+
+          <article class="team-card">
+            <div class="team-placeholder">FOTO</div>
+            <h3>Julia Göthe, 2. Dan</h3>
+            <p>Trainerin · Kinder, Jugend & Erwachsene</p>
+          </article>
+
+          <article class="team-card">
+            <div class="team-placeholder">FOTO</div>
+            <h3>Andrea Baumann, 1. Dan</h3>
+            <p>Trainerin · Little Tigers</p>
+          </article>
+
+          <article class="team-card">
+            <div class="team-placeholder">FOTO</div>
+            <h3>Yvonne Borina, 4. Kup</h3>
+            <p>Assistenztrainerin · Little Tigers</p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- TRAININGSZEITEN -->
+    <section id="zeiten">
+      <div class="container">
+
+        <div class="section-head">
+          <div class="section-label">Wann trainieren wir?</div>
+          <h2>Unsere Trainingszeiten</h2>
+          <p>
+            Hier werden die aktuellen Trainingszeiten übersichtlich
+            dargestellt.
+          </p>
+        </div>
+
+        <div class="schedule-box">
+
+          <div class="schedule-row header">
+            <div>Tag</div>
+            <div>Gruppe</div>
+            <div>Uhrzeit</div>
+          </div>
+
+          <!--
+            HIER DIE AKTUELLEN TRAININGSZEITEN EINTRAGEN.
+
+            Beispiel:
+
+            <div class="schedule-row">
+              <div>Montag</div>
+              <div>Little Tigers</div>
+              <div>16:00 – 17:00</div>
+            </div>
+          -->
+
+          <div class="schedule-row">
+            <div>Trainingsplan</div>
+            <div>Aktuelle Zeiten folgen</div>
+            <div>—</div>
+          </div>
+
+        </div>
+
+        <p class="schedule-note">
+          An Feiertagen findet kein Training statt.
+          In den Ferien können Sondertrainingspläne gelten.
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- PROBETRAINING -->
+    <section id="probetraining" class="cta">
+
+      <div class="container">
+
+        <div class="section-label">Jetzt ausprobieren</div>
+
+        <h2>
+          Lust auf Taekwondo?
+        </h2>
+
+        <p>
+          Du möchtest wissen, ob Taekwondo zu dir oder deinem Kind passt?
+          Dann komm zu einem kostenlosen Probetraining vorbei.
+        </p>
+
+        <a
+          class="button"
+          href="mailto:kontakt@taekwondo-grafing.de?subject=Anfrage%20Probetraining"
+        >
+          PROBETRAINING VEREINBAREN
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- KONTAKT -->
+    <section id="kontakt">
+      <div class="container">
+
+        <div class="section-head">
+          <div class="section-label">Kontakt</div>
+          <h2>Wir freuen uns auf dich.</h2>
+          <p>
+            Melde dich gerne, wenn du Fragen hast oder ein Probetraining
+            vereinbaren möchtest.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+
+          <div>
+
+            <div class="contact-item">
+              <strong>Traditionelle Kampfkunstschule</strong>
+              Robert Neumann<br>
+              Taekwondo Großmeister 5. Dan
+            </div>
+
+            <div class="contact-item">
+              <strong>Adresse</strong>
+              Glonner Str. 1<br>
+              85567 Grafing b. München
+            </div>
+
+            <div class="contact-item">
+              <strong>Telefon</strong>
+              <a href="tel:+491707631096">
+                +49 (0) 170 7631096
+              </a>
+            </div>
+
+            <div class="contact-item">
+              <strong>E-Mail</strong>
+              <a href="mailto:kontakt@taekwondo-grafing.de">
+                kontakt@taekwondo-grafing.de
+              </a>
+            </div>
+
+          </div>
+
+
+          <div class="contact-card">
+
+            <h3>Probetraining</h3>
+
+            <p>
+              Für ein Schnuppertraining genügt bequeme Sportkleidung,
+              zum Beispiel Jogginghose und T-Shirt. Schuhe sind nicht
+              erforderlich – Taekwondo wird barfuß trainiert.
+            </p>
+
+            <p>
+              Bitte komm ungefähr 10 Minuten vor Trainingsbeginn,
+              damit offene Fragen noch in Ruhe besprochen werden können.
+            </p>
+
+            <a
+              class="button button-primary"
+              href="mailto:kontakt@taekwondo-grafing.de?subject=Anfrage%20Probetraining"
+            >
+              Jetzt Anfrage senden
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="container footer-grid">
+
+      <div>
+        <strong>TAEKWONDO GRAFING</strong>
+        <p>Traditionelle Kampfkunstschule Robert Neumann</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#start">Startseite</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="#">Impressum</a>
+        <a href="#">Datenschutz</a>
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
